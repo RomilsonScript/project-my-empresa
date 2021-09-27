@@ -18,8 +18,7 @@ import fpo from '../../assets/FPO_LOGO.png';
 import esus from '../../assets/ESUS_LOGO.png';
 
 //LOGOS CLIENTES
-import logo_lencois_ba from '../../assets/logo_lencois_ba.jpg';
-import logo_nova_redencao_ba from '../../assets/logo_nova_redencao_ba.jpg';
+
 
 function Home() {
 
@@ -32,7 +31,6 @@ function Home() {
   */
 
   //SETA TRUE SE HOUVER CLIENTES
-  const [cliente, setCliente] = useState(true);
   
   useEffect(() => {
     //abilita();
@@ -120,17 +118,7 @@ function Home() {
       />
     </S.ContentSevicos>
 
-    {
-      cliente &&
-      <S.ContentClientes>
-        <div className="titleSectionConteiner">
-          <h3 className="titleSection">Clientes</h3>
-        </div>
-        <img src={logo_lencois_ba} alt="PREFEITURA MUNICIPAL DE LENÇÓIS-BA"/>
-        <img src={logo_nova_redencao_ba} alt="PREFEITURA MUNICIPAL DE NOVA REDENÇÃO-BA"/>
-      </S.ContentClientes>
-    }
-
+    
     <S.ConteinerContato>
         <div className="titleSectionConteiner">
           <h3 className="titleSection">Contato</h3>
