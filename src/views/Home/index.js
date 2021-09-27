@@ -3,7 +3,7 @@ import * as S from './style';
 
 
 import Menu from '../../components/Menu';
-//import Inputs from '../../components/Inputs'
+import Inputs from '../../components/Inputs'
 
 import CardServicos from '../../components/Sevicos';
 
@@ -24,11 +24,11 @@ function Home() {
 
   const [service, setService] = useState(false);
 
-  /*const [nome, setNome] = useState("romilson");
-	const [email, setEmai] = useState("hotmail");
-  const [tel, setTel] = useState("75");
-	const [descricao, setDescricao] = useState("ete");
-  */
+  const [nome, setNome] = useState();
+	const [email, setEmai] = useState();
+  const [tel, setTel] = useState();
+	const [descricao, setDescricao] = useState();
+  
 
   //SETA TRUE SE HOUVER CLIENTES
   
@@ -134,7 +134,10 @@ function Home() {
         </div>
 
         <form className="sectionContato">
-          
+          <Inputs wid={100} title="Nome" type="text" getValor={setNome} texto={nome}/>
+          <Inputs wid={100} title="Email" type="text" getValor={setEmai} texto={email}/>
+          <Inputs wid={100} title="Telefone" type="text" getValor={setTel} texto={tel}/>
+          <Inputs wid={100} title="Descrição" type="text" areaInput={true} getValor={setDescricao} texto={descricao}/>
         </form>
 
     </S.ConteinerContato>

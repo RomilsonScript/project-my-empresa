@@ -1,28 +1,32 @@
-import React, {useState} from 'react';
+import React from 'react';
 import * as S from './style';
 
 
-function Imputs({ wid, title, type, place, areaInput, getValor}) {
+function Imputs({ wid, title, type, place, areaInput, getValor, isRequeredItem, classInput, texto}) {
 
-  const [valor, setValor] = useState();
+  //const [valor, setValor] = useState();
+
 
   return (
-    <S.Container style={wid ? {width:`${wid}%`} : {width:'100%'}}>
-     <label>{title ? title : 'Titulo'}</label>
+    <S.Container larg={wid}>
+     <label>{title ? title : 'Titulo'}{isRequeredItem && <span>&#10033;</span>}</label>
+     
      {
        areaInput ?
      <textarea 
-     onChange={e => setValor(e.target.value) & getValor(e.target.value)} value={valor}
+     onChange={e => getValor(e.target.value)} value={texto}
      type={type ? type : 'text'} 
      placeholder={place ? place : ' '}
      />
      :
      <input 
-     onChange={e => setValor(e.target.value) & getValor(e.target.value)} value={valor}
+     onChange={e => getValor(e.target.value)} value={texto}
      type={type ? type : 'text'} 
      placeholder={place ? place : ' '}
+      className={classInput ? classInput : ''}
      />
     }
+    
     </S.Container>
   );
 }
