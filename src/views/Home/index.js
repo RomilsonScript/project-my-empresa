@@ -44,7 +44,7 @@ function Home() {
     <S.Container>
       
       <S.header>
-        <div className="topContato"><p>(75) 99940-5011</p></div>
+        <div className="topContato"><p>(075) 99940-5011</p></div>
 
         <div className="headerNav">
           <div>
