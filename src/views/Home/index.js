@@ -127,7 +127,7 @@ function Home() {
     
     <S.ConteinerContato>
         <div className="titleSectionConteiner">
-          <h3 className="titleSection">Entre em Contato e Solicite um Orçamento</h3>
+          <h3 className="titleSection">Contato</h3>
         </div>
 
         <div className="sectionContato">
@@ -140,6 +140,7 @@ function Home() {
         </div>
 
         <form className="sectionContato">
+          <h3>Preencha o Formulário para Solicitar Orçamento</h3>
           <Inputs wid={100} title="Nome" type="text" getValor={setNome} texto={nome}/>
           <Inputs wid={100} title="Email" type="text" getValor={setEmai} texto={email}/>
           <Inputs wid={100} title="Telefone" type="text" getValor={setTel} texto={tel}/>
@@ -148,6 +149,11 @@ function Home() {
         </form>
 
     </S.ConteinerContato>
+    
+    <S.Footer>
+      <p>&#169; COPYRIGHT RSDesenvolvimento</p>
+      <p>Site em desenvolvimento</p>
+    </S.Footer>
 
 
       <S.ContainerInforServices style={service !== false ? {display:'flex'}:{display:'none'}}>

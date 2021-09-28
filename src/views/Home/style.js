@@ -37,7 +37,7 @@ export const header = styled.div`
    margin: 0px;
    position: relative;
    display: flex;
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    align-items: space-around;
    flex-direction: column;
    justify-content: flex-start;
@@ -103,6 +103,9 @@ export const header = styled.div`
             font-size:2rem;
             width:80%;
          }
+         @media (max-height: 587px) {
+            font-size:1.8rem;
+         }
       }
       p{
          font-family:Arial;
@@ -110,7 +113,7 @@ export const header = styled.div`
          width:100%;
 
          @media (max-width: 480px) {
-            width:80%;
+            display: none;
          }
       }
       @media (max-width: 480px) {
@@ -133,7 +136,7 @@ export const header = styled.div`
       background-size:100% 90%;
     }
     @media (max-width: 480px) {
-      height:100vh;
+      height: 100vh;
     }
    
 `;
@@ -273,9 +276,8 @@ export const ConteinerContato = styled.div`
    flex-direction: row;
    justify-content:center;
    align-content: flex-start;
-   align-items:center;
+   align-items:flex-start;
    flex-wrap:wrap;
-   height:500px;
    margin:50px 0px;
 
 
@@ -293,7 +295,7 @@ export const ConteinerContato = styled.div`
       h3{
          width:100%;
          display:block;
-         text-align:center;
+         text-align:left;
          font-family:'titulo-2';
          color:#ff7f50;
          margin:0px;
@@ -301,7 +303,7 @@ export const ConteinerContato = styled.div`
       p{
          width:100%;
          display:block;
-         text-align:center;
+         text-align:left;
          font-family:'titulo-2';
          color:#2f3542;
          margin:0px;
@@ -406,10 +408,27 @@ export const ContainerInforServices = styled.div`
          width:90%;
          height:90vh;
        }
+       
    }
 
 `;
 
 export const Footer = styled.div`
+   width: 100%;
+   height: 250px;
+   background: #2f3542;
+   display:flex;
+   flex-direction: row;
+   justify-content:center;
+   align-content: center;
+   align-items:center;
+   flex-wrap:wrap;
+
+   p{
+      width: 100%;
+      text-align: center;
+      color: #fff;
+      font-family: 'Arial';
+   }
 
 `;

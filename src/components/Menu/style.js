@@ -10,7 +10,7 @@ export const Container = styled.div`
     align-items:center;
     transition:all .2s ease;
     position:relative;
-
+    
        
 
     &:hover{
@@ -18,7 +18,6 @@ export const Container = styled.div`
     }
     .linksConteiner{
         text-decoration:none;
-        color:;
         margin:15px;
         font-family:Arial;
         font-weight:500;
