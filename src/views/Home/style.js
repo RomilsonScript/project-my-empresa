@@ -284,7 +284,7 @@ export const ConteinerContato = styled.div`
       height:100%;
       display:flex;
       flex-direction: row;
-      justify-content:center;
+      justify-content:flex-start;
       align-content: flex-start;
       align-items:center;
       flex-wrap:wrap;

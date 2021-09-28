@@ -4,6 +4,7 @@ import * as S from './style';
 
 import Menu from '../../components/Menu';
 import Inputs from '../../components/Inputs'
+import InputBtns from '../../components/InputsBtns'
 
 import CardServicos from '../../components/Sevicos';
 
@@ -29,6 +30,11 @@ function Home() {
   const [tel, setTel] = useState();
 	const [descricao, setDescricao] = useState();
   
+
+  function testeFunc(){
+    alert(`Oi ${nome}, estou em desenvolvimento! Espero você quando estiver pronto.`);
+  }
+
 
   //SETA TRUE SE HOUVER CLIENTES
   
@@ -121,7 +127,7 @@ function Home() {
     
     <S.ConteinerContato>
         <div className="titleSectionConteiner">
-          <h3 className="titleSection">Contato</h3>
+          <h3 className="titleSection">Entre em Contato e Solicite um Orçamento</h3>
         </div>
 
         <div className="sectionContato">
@@ -138,6 +144,7 @@ function Home() {
           <Inputs wid={100} title="Email" type="text" getValor={setEmai} texto={email}/>
           <Inputs wid={100} title="Telefone" type="text" getValor={setTel} texto={tel}/>
           <Inputs wid={100} title="Descrição" type="text" areaInput={true} getValor={setDescricao} texto={descricao}/>
+          <InputBtns bg="#2ed573" value="Enviar" startFunction={testeFunc}/>
         </form>
 
     </S.ConteinerContato>
