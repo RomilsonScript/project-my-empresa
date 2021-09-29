@@ -18,6 +18,7 @@ import sia from '../../assets/SIA_LOGO.png';
 import fpo from '../../assets/FPO_LOGO.png';
 import esus from '../../assets/ESUS_LOGO.png';
 
+
 //LOGOS CLIENTES
 
 
@@ -127,16 +128,11 @@ function Home() {
     
     <S.ConteinerContato>
         <div className="titleSectionConteiner">
-          <h3 className="titleSection">Contato</h3>
+          <h3 className="titleSection">Fale Conosco</h3>
         </div>
 
-        <div className="sectionContato">
-          <h3>Endereço</h3>
-          <p>Rua vai quem quer, nº 058</p>
-          <p>Lençóis Bahia</p>
-
-          <h3 style={{marginTop:40}}>Telefone</h3>
-          <p>(75) 99940-5011</p>
+        <div className="imgFaleConosco">
+          
         </div>
 
         <form className="sectionContato">
@@ -148,11 +144,28 @@ function Home() {
           <InputBtns bg="#2ed573" value="Enviar" startFunction={testeFunc}/>
         </form>
 
+
     </S.ConteinerContato>
     
     <S.Footer>
-      <p>&#169; COPYRIGHT RSDesenvolvimento</p>
-      <p>Site em desenvolvimento</p>
+      <div className="leftAreaFooter">
+        <div className="contEnd">
+          <h3>Endereço</h3>
+          <p>Rua vai quem quer, nº 058</p>
+          <p>Lençóis Bahia</p>
+        </div>
+
+        <div className="contEnd">
+          <h3>Telefone</h3>
+          <p>(75) 99940-5011</p>
+        </div>
+      </div>
+
+      <div className="rightAreaFooter">
+        <p>&#169; COPYRIGHT RSDesenvolvimento</p>
+        <p>Site em desenvolvimento</p>
+      </div>
+
     </S.Footer>
 
 
